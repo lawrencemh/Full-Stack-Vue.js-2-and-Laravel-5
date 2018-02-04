@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Listing extends Model
 {
     /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = [
+        'images',
+    ];
+
+    /**
      * The attributes that should be cast to native types.
      *
      * @var array
@@ -38,4 +47,19 @@ class Listing extends Model
         'price_weekly_discount',
         'price_monthly_discount',
     ];
+
+    /**
+     * Get the image array for this listing.
+     *
+     * @return array
+     */
+    public function getImagesAttribute()
+    {
+        $array['image_1'] = asset("images/{$this->id}/Image_1.jpg");
+        $array['image_2'] = asset("images/{$this->id}/Image_2.jpg");
+        $array['image_3'] = asset("images/{$this->id}/Image_3.jpg");
+        $array['image_4'] = asset("images/{$this->id}/Image_4.jpg");
+
+       return $array;
+   }
 }
