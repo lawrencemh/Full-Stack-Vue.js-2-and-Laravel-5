@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
 use App\Models\Listing;
-use App\Http\Controllers\Controller;
 
 class ListingsController extends Controller
 {
@@ -11,11 +10,10 @@ class ListingsController extends Controller
      * Display the specified resource.
      *
      * @param \App\Models\Listing $listing
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\View\View
      */
     public function show(Listing $listing)
     {
-        return response()->json($listing);
+        return view('app')->with(['listing' => $listing]);
     }
-
 }
