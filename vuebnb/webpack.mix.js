@@ -18,4 +18,5 @@ mix.js('resources/assets/js/app.js', 'public/js')
     .browserSync({
         proxy: process.env.APP_URL,
         open : false
-    });
+    })
+    .version();
