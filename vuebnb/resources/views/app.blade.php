@@ -35,10 +35,7 @@
 
                 <div class="about">
                     <h3>About this listing</h3>
-                    <p v-bind:class="{contracted: contracted}">@{{ about }}</p>
-                    <button class="more" v-on:click="contracted = !contracted">
-                        @{{ contracted ? 'More' : 'Less' }}
-                    </button>
+                    <expandable-text>@{{ about }}</expandable-text>
                 </div>
 
                 <div class="lists">

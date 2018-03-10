@@ -9,6 +9,7 @@ Vue.component('ImageCarousel', require('./components/ImageCarousel.vue'));
 Vue.component('ModalWindow', require('./components/ModalWindow.vue'));
 Vue.component('FeatureList', require('./components/FeatureList.vue'));
 Vue.component('HeaderImage', require('./components/HeaderImage.vue'));
+Vue.component('ExpandableText', require('./components/ExpandableText.vue'));
 
 let model = JSON.parse(window.vuebnb_listing_model);
 model     = populateAmenitiesAndPrices(model);
