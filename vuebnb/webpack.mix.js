@@ -3,6 +3,23 @@ let mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
+ | Alias config
+ |--------------------------------------------------------------------------
+ |
+ | Here we override the vue alias to refer to the runtime dist that excludes
+ | the string html runtime compiler, as everything is compiled before hand
+ | in the app.js build.
+ */
+mix.webpackConfig({
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.runtime.esm.js',
+        }
+    }
+});
+
+/*
+ |--------------------------------------------------------------------------
  | Mix Asset Management
  |--------------------------------------------------------------------------
  |
