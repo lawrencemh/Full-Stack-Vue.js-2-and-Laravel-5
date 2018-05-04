@@ -10,6 +10,7 @@ class ListingsController extends Controller
      * Display the specified resource.
      *
      * @param \App\Models\Listing $listing
+     *
      * @return \Illuminate\View\View
      */
     public function show(Listing $listing)
