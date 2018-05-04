@@ -1,8 +1,10 @@
 <template>
     <div>
         <div id="toolbar">
-            <img class="icon" src="/images/logo.png">
-            <h1>vuebnb</h1>
+            <router-link :to="{ name: 'home' }">
+                <img class="icon" src="/images/logo.png">
+                <h1>vuebnb</h1>
+            </router-link>
         </div>
         <router-view></router-view>
     </div>

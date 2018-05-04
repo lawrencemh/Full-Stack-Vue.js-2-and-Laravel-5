@@ -11,4 +11,5 @@
 |
 */
 
+Route::get('/', 'HomeController@index')->name('index');
 Route::get('listings/{listing}', 'ListingsController@show')->name('listings.show');
