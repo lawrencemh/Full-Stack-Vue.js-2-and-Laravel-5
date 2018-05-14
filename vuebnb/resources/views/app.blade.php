@@ -10,7 +10,7 @@
 
         <!-- inject model data for Vue -->
         <script>
-            window.vuebnb_listing_model = "{!! addslashes(isset($listing) ? $listing->toJson() : json_encode([])) !!}";
+            window.vuebnb_server_data = "{!! addslashes(isset($data) ? $data->toJson() : json_encode([])) !!}";
         </script>
     </head>
     <body>

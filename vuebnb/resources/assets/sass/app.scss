@@ -1,6 +1,10 @@
 @import '../../../node_modules/open-sans-all/scss/open-sans';
 @import '../../../node_modules/font-awesome/scss/font-awesome';
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     color: #484848;
@@ -250,4 +254,73 @@ hr {
         font-size: 3rem;
     }
 
+}
+
+.listing-summary {
+    flex: 0 0 auto;
+
+    &-group {
+        margin-bottom: 20px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    &__wrapper {
+        max-width: 350px;
+        display: block;
+    }
+
+    &--thumbnail {
+        width: 350px;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &--title, &--address {
+        color: #484848;
+        word-wrap: break-word;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &--title {
+        padding-top: 5px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &--address {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.listing-summaries {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+
+    .listing-summary {
+        margin-right: 15px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.home-container {
+    margin: 0 auto;
+    padding: 0 25px;
+    
+    @media (min-width: 1131px) {
+        width: 1080px;
+    }
 }

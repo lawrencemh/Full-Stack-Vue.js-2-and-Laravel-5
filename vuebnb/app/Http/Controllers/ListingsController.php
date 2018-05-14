@@ -15,6 +15,6 @@ class ListingsController extends Controller
      */
     public function show(Listing $listing)
     {
-        return view('app')->with(['listing' => $listing]);
+        return view('app')->with(['data' => $listing]);
     }
 }

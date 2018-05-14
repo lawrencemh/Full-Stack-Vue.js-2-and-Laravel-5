@@ -13,6 +13,7 @@ class Listing extends Model
      */
     protected $appends = [
         'images',
+        'thumb',
     ];
 
     /**
@@ -60,6 +61,16 @@ class Listing extends Model
         $array['image_3'] = asset("images/{$this->id}/Image_3.jpg");
         $array['image_4'] = asset("images/{$this->id}/Image_4.jpg");
 
-       return $array;
-   }
+        return $array;
+    }
+
+    /**
+     * Get the image src for this listing's thumbnail.
+     *
+     * @return string
+     */
+    public function getThumbAttribute()
+    {
+        return asset("images/{$this->id}/Image_1_thumb.jpg");
+    }
 }

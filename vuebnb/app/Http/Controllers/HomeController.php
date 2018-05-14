@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Listing;
+
 class HomeController extends Controller
 {
     /**
@@ -11,7 +13,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('app');
+        $listings = Listing::all(['id', 'address', 'title', 'price_per_night']);
+
+        return view('app')->with([
+            'data' => $listings,
+        ]);
     }
 
 }
